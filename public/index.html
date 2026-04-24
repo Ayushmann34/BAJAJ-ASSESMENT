@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFHL Graph API Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Graph Analysis Tool</h1>
+            <p>Enter a JSON payload containing an array of directed edges (e.g., "A->B") to analyze the graph structure.</p>
+        </header>
+        
+        <main>
+            <section class="input-section">
+                <label for="jsonInput">Input JSON payload:</label>
+                <textarea id="jsonInput" rows="10" placeholder='{
+  "data": ["A->B", "A->C", "B->D"]
+}'></textarea>
+                <button id="submitBtn">Analyze Graph</button>
+                <div id="errorMsg" class="error hidden"></div>
+            </section>
+            
+            <section class="output-section">
+                <h2>API Response:</h2>
+                <pre id="jsonOutput">Response will appear here...</pre>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
